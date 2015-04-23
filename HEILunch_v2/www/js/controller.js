@@ -13,14 +13,27 @@ nameSpace.controller("GetFoodPlan", ['$scope', '$http', function($scope, $http) 
                 .error(function(data, status, headers, config){
                     console.log('Error connecting to backend :( ' + data + ' ' + status + ' ' + config);
                 })
-
-
     }]
 );*/
 
-var myFoodControllers = angular.module('myFoodControllers', []);
 
+
+angular.module('food', ['food.service'])
+
+
+        .controller('FoodController', ['$scope', 'Food', '$log', function($scope, Food) {
+
+            console.log('Try to connect to backend server....');
+            Food.all().success(
+                function (allFoods) {
+                    console.log('SERVER SUCCESS');
+                    $scope.foods = allFoods;
+                });
+}]);
+
+
+/*
 myFoodControllers.controller('FoodListCtrl', ['$scope', 'Food', function($scope, Food){
     $scope.oneFoodVariable = Food.query();
-}]);
+}]);*/
 

@@ -31,11 +31,12 @@
   <script src="./src/users/Users.js"></script>
   <script src="./src/users/UserController.js"></script>
   <script src="./src/users/UserService.js"></script>
-  <script src="./js/controller.js"></script>
   <script src="./js/services.js"></script>
+  <script src="./js/controller.js"></script>
 
 
-  <body ng-app="starterApp" layout="column" ng-controller="UserController as ul" ng-controller="FoodListCtrl as mfc">
+
+  <body ng-app="starterApp" layout="column" ng-controller="UserController as ul" ng-controller="FoodController as fc">
 
     <md-toolbar layout="row">
       <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
@@ -63,7 +64,7 @@
           <h2>{{ul.selected.name}}</h2>
           <p>{{ul.selected.content}}</p>
 
-            <p><i class="mdicons-local-florist mdicons-4x"></i> Icon-example2 {{mfc.oneFoodVariable}} </p>
+            <p><i class="mdicons-local-florist mdicons-4x"></i> Icon-example2 {{fc.foods}} </p>
 
 
 
@@ -78,7 +79,7 @@
     <script type="text/javascript">
 
           angular
-              .module('starterApp', ['ngMaterial', 'users', 'myFoodServices', 'myFoodControllers'])
+              .module('starterApp', ['ngMaterial', 'users', 'food'])
               .config(function($mdThemingProvider, $mdIconProvider){
 
                   $mdIconProvider
