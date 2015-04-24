@@ -36,7 +36,7 @@
 
 
 
-  <body ng-app="starterApp" layout="column" ng-controller="UserController as ul" ng-controller="FoodController as fc">
+  <body ng-app="starterApp" layout="column" ng-controller="UserController as ul">
 
     <md-toolbar layout="row">
       <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
@@ -45,7 +45,7 @@
       <h1>Heitec - HEILunch</h1>
     </md-toolbar>
 
-    <div flex layout="row">
+    <div flex layout="row" ng-controller="FoodController as fc">
 
         <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
           <md-list>

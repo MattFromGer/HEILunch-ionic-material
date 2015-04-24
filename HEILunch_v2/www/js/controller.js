@@ -28,6 +28,9 @@ angular.module('food', ['food.service'])
                 function (allFoods) {
                     console.log('SERVER SUCCESS');
                     $scope.foods = allFoods;
+                })
+                .error(function(data, status){
+                    console.log('Error connection to backend :( ' + data + ' ' + status);
                 });
 }]);
 
