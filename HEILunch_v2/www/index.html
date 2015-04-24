@@ -9,9 +9,10 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
     <link rel="stylesheet" href="css/material-design-iconic-font.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
-    <link rel="stylesheet" href="css/app.css"/>
+
     <!--<link href="lib/ionic/css/ionic.css" rel="stylesheet">-->
     <link rel="stylesheet" href="./lib/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
 
 
   </head>
@@ -31,6 +32,8 @@
   <script src="./src/users/Users.js"></script>
   <script src="./src/users/UserController.js"></script>
   <script src="./src/users/UserService.js"></script>
+
+  <script src="./js/init.js"></script>
   <script src="./js/services.js"></script>
   <script src="./js/controller.js"></script>
 
@@ -64,7 +67,30 @@
           <h2>{{ul.selected.name}}</h2>
           <p>{{ul.selected.content}}</p>
 
-            <p><i class="mdicons-local-florist mdicons-4x"></i> Icon-example2 {{fc.foods}} </p>
+            <div>
+            <md-grid-list
+                    md-cols-sm="1" md-cols-md="3" md-cols-gt-md="3"
+                    md-row-height-gt-md="1:1" md-row-height="2:2"
+                    md-gutter="12px" md-gutter-gt-sm="8px" >
+                <md-grid-tile class="red" md-rowspan="1" md-colspan="1" md-colspan-sm="1">
+                    <md-grid-tile-header>
+                        <h3>Essen #1</h3>
+                    </md-grid-tile-header>
+                </md-grid-tile>
+                <md-grid-tile class="blue">
+                    <md-grid-tile-header>
+                        <h3>Essen #2</h3>
+                    </md-grid-tile-header>
+                </md-grid-tile>
+                <md-grid-tile class="green">
+                    <md-grid-tile-header>
+                        <h3>Salat</h3>
+                    </md-grid-tile-header>
+                </md-grid-tile>
+                </md-grid-list>
+                </div>
+
+            <!--<p><i class="mdicons-local-florist mdicons-4x"></i> Icon-example2 {{fc.foods}} </p>-->
 
 
 
@@ -79,7 +105,7 @@
     <script type="text/javascript">
 
           angular
-              .module('starterApp', ['ngMaterial', 'users', 'food'])
+              .module('starterApp', ['ngMaterial', 'users', 'foodModule'])
               .config(function($mdThemingProvider, $mdIconProvider){
 
                   $mdIconProvider
