@@ -4,8 +4,8 @@
 (function(){
     'use strict';
 
-    // Prepare the 'users' module for subsequent registration of controllers and delegates
-    angular.module('foodModule', [ 'ngMaterial', 'ngResource' ]);
+    // Prepare the 'foodModule' module for subsequent registration of controllers and delegates
+    angular.module('foodModule', [ 'ngMaterial', 'ngResource']);
 
 
 })();

@@ -2,26 +2,21 @@ html, body {
   font-family: 'Roboto', sans-serif;
   font-size:14px;
   height:100%;
-  margin: 0px;
-  padding: 0px;
 }
 
-.gridListdemoBasicUsage md-grid-list {
-  margin: 8px; }
-.gridListdemoBasicUsage .gray {
-  background: #f5f5f5; }
-.gridListdemoBasicUsage .green {
-  background: #b9f6ca; }
-.gridListdemoBasicUsage .yellow {
-  background: #ffff8d; }
-.gridListdemoBasicUsage .blue {
-  background: #84ffff; }
-.gridListdemoBasicUsage .purple {
-  background: #b388ff; }
-.gridListdemoBasicUsage .red {
-  background: #ff8a80; }
-.gridListdemoBasicUsage md-grid-tile {
-  transition: all 400ms ease-out 50ms; }
+md-grid-list { margin: 8px; }
+.gray { background: #f5f5f5; }
+.green { background: #b9f6ca; }
+.yellow { background: #ffff8d; }
+.blue { background: #84ffff; }
+.purple { background: #b388ff; }
+.red { background: #ff8a80; }
+
+
+
+md-grid-tile {
+  transition: all 400ms ease-out 50ms;
+}
 
 /* Toolbar area */
 
@@ -145,5 +140,13 @@ span.name {
   font-size:1.1em;
   padding-left:5px;
 }
+
+
+md-content {
+  margin-right: 7px; }
+md-button {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
 
 

@@ -10,7 +10,7 @@
             function ($http) {
                 return {
                     all: function () {
-                        return $http.get('http://localhost:50754/api/FoodPlans');
+                        return $http.get('http://localhost:50754/api/FoodPlans/');
                     },
                     single: function (id) {
                         return $http.get('http://localhost:50754/api/FoodPlans/' + id)
@@ -36,16 +36,10 @@
  (function(){
  'use strict';
 
- angular.module('foodModule').factory('Food', ['$resource',
+ angular.module('foodModule').factory('Food',
     function($resource){
-        return {
-            all: function() {
-                return $resource('http://localhost:50754/api/FoodPlans', {}, {
+        return $resource('http://localhost:50754/api/FoodPlans', {}, { //http://localhost:50754/api/FoodPlans
                     query: {method: 'GET', isArray: true}
-                })
-            }
-            };
-        }
-    ]);
- })();
-*/
+                });
+            })
+ })();*/
